@@ -9,3 +9,4 @@ def best_score(a_dictionary):
             else:
                 max_num
         return max_num
+    return None
