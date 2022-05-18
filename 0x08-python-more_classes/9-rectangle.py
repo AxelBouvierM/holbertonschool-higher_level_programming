@@ -127,4 +127,4 @@ class Rectangle:
         """
         Return a new Rectangle class
         """
-        return cls(size, size)
+        return (cls(size, size))
