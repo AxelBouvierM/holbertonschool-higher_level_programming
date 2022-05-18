@@ -127,5 +127,4 @@ class Rectangle:
         """
         Return a square
         """
-
         return cls(size, size)
