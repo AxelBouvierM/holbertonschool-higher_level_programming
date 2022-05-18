@@ -20,8 +20,8 @@ class Rectangle:
             width (int): Is the width of a Rectangle
             height (int): Is the height of a Rectangle
         """
-        self.height = height
-        self.width = width
+        self.__height = height
+        self.__width = width
         Rectangle.number_of_instances += 1
 
     @property
@@ -127,4 +127,4 @@ class Rectangle:
         """
         Return a new Rectangle class
         """
-        return (cls(size, size))
+        return cls(size, size)
