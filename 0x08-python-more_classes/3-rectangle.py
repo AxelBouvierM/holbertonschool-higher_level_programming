@@ -76,7 +76,7 @@ class Rectangle:
 
     def __str__(self):
         """
-        asdsadsa
+        Return a string with a rectangle
         """
         string = ""
         if self.__width == 0 or self.__height == 0:
