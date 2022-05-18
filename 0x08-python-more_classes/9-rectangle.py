@@ -125,6 +125,6 @@ class Rectangle:
     @classmethod
     def square(cls, size=0):
         """
-        returns a new Rectangle instance
+        Return a new Rectangle class
         """
         return cls(size, size)
