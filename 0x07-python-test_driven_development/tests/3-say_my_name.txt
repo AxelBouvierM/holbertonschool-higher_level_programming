@@ -1,0 +1,37 @@
+"""Say my name"""
+
+"""Test function 2 Say my name"""
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+>>> say_my_name("Walter", "White")
+My name is Walter White
+
+>>> say_my_name("White")
+My name is White 
+
+>>> say_my_name("", "White")
+My name is  White
+
+>>> say_my_name(None, "White")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name("Walter", None)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+>>> say_my_name(None, None)
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name(4, "White")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name("Walter", 4)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+>>> say_my_name("", "")
+My name is  
