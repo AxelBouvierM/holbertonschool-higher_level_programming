@@ -1,0 +1,26 @@
+"""Text indentation"""
+
+"""Test function 4 Text indentation"""
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation("Hello World? Holberton School")
+Hello World?
+<BLANKLINE>
+Holberton School
+
+>>> text_indentation(54)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> text_indentation("Hello World this is a test for Holberton School")
+Hello World this is a test for Holberton School
+
+>>> text_indentation("Hello World? this is: a test. for Holberto School")
+Hello World?
+<BLANKLINE>
+this is:
+<BLANKLINE>
+a test.
+<BLANKLINE>
+for Holberto School
