@@ -1,0 +1,36 @@
+"""This is a tests for task 0 integers addition"""
+
+"""Function that adds 2 integers"""
+>>> add_integer = __import__('0-add_integer').add_integer
+
+"""XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"""
+
+>>> add_integer(5, 5)
+10
+
+>>> add_integer(4, -3)
+1
+
+>>> add_integer(2)
+100
+
+>>> add_integer("Hello")
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer(13.1, 13.1)
+26
+
+>>> add_integer(0, 0)
+0
+
+>>> add_integer(0)
+98
+
+>>> add_integer(None)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer(3, "Hello")
+Traceback (most recent call last):
+TypeError: b must be an integer
