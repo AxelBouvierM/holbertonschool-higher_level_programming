@@ -55,4 +55,6 @@ TypeError: area() takes 1 positional argument but 2 were given
 Traceback (most recent call last):
 TypeError: test2 must be an integer
 
-
+>>> base.integer_validator("test3", None)
+Traceback (most recent call last):
+TypeError: test3 must be an integer
