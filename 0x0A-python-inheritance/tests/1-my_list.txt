@@ -1,0 +1,11 @@
+"""Test class MyList that inherits from list"""
+
+>>> MyList = __import__('1-my_list').MyList
+
+>>> list.append(5)
+>>> list.append(4)
+>>> list.append(3)
+>>> list.append(2)
+>>> list.append(1)
+>>> list.print_sorted()
+[1, 2, 3, 4, 5]
