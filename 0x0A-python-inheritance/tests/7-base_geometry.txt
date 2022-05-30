@@ -1,0 +1,21 @@
+"""class BaseGeometry"""
+
+"""Test that validates value"""
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+>>> base = BaseGeometry()
+>>> base.integer_validator("my_int", 21)
+>>> base.integer_validator("width", 33)
+
+>>> base.integer_validator("age", -2)
+Traceback (most recent call last):
+ValueError: age must be greater than 0
+
+>>> base.integer_validator("age", 0)
+Traceback (most recent call last):
+ValueError: age must be greater than 0
+
+>>> base.integer_validator("age", "Hello")
+Traceback (most recent call last):
+TypeError: age must be an integer
