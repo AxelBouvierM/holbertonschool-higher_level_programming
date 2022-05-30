@@ -74,3 +74,7 @@ TypeError: test6 must be an integer
 >>> base.integer_validator("test7", [1, 2, 3])
 Traceback (most recent call last):
 TypeError: test7 must be an integer
+
+>>> base.integer_validator("test8", "50")
+Traceback (most recent call last):
+TypeError: test8 must be an integer
