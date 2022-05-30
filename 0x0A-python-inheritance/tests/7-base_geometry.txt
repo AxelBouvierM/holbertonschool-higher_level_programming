@@ -8,6 +8,7 @@
 >>> base.integer_validator("my_int", 12)
 >>> base.integer_validator("width", 89)
 >>> base.integer_validator("", 100)
+>>> base.integer_validator("test0", 1012210)
 
 
 >>> base.area()
@@ -45,3 +46,13 @@ TypeError: integer_validator() missing 1 required positional argument: 'value'
 >>> base.integer_validator()
 Traceback (most recent call last):
 TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+>>> base.area("xxx")
+Traceback (most recent call last):
+TypeError: area() takes 1 positional argument but 2 were given
+
+>>> base.integer_validator("test2", {"x": 5})
+Traceback (most recent call last):
+TypeError: test2 must be an integer
+
+
