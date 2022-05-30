@@ -9,3 +9,8 @@
 >>> list.append(1)
 >>> list.print_sorted()
 [1, 2, 3, 4, 5]
+
+>>> list.append(-6)
+>>> list.append(-2)
+>>> list.print_sorted()
+[-6, -2, 1, 2, 3, 4, 5]
