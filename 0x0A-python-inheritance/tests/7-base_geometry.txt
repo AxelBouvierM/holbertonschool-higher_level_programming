@@ -62,3 +62,15 @@ TypeError: test3 must be an integer
 >>> base.integer_validator("test4", BaseGeometry)
 Traceback (most recent call last):
 TypeError: test4 must be an integer
+
+>>> base.integer_validator("test5", {3, 4})
+Traceback (most recent call last):
+TypeError: test5 must be an integer
+
+>>> base.integer_validator("test6", (1, 2, 3))
+Traceback (most recent call last):
+TypeError: test6 must be an integer
+
+>>> base.integer_validator("test7", [1, 2, 3])
+Traceback (most recent call last):
+TypeError: test7 must be an integer
