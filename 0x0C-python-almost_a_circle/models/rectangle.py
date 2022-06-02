@@ -122,7 +122,7 @@ class Rectangle(Base):
         string1 = string + str(self.y) + " - " + str(self.width) + "/"
         return string1 + str(self.height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         assigns an argument to each attribute
         """
