@@ -73,6 +73,10 @@ class Rectangle(Base):
         """
         Set the x
         """
+        if type(value) != int:
+            raise TypeError("x must be an integer")
+        if value < 0:
+            raise ValueError("x must be >= 0")
         self.__x = value
 
     @property
@@ -87,4 +91,31 @@ class Rectangle(Base):
         """
         Set the y
         """
+        if type(value) != int:
+            raise TypeError("y must be an integer")
+        if value < 0:
+            raise ValueError("y must be >= 0")
         self.__y = value
+
+    def area(self):
+        """
+        Return the area of the rectangle
+        """
+        return self.__width * self.__height
+
+    def display(self):
+        """
+        Prints in stdout the Rectangle
+        """
+        for i in range(self.__height):
+            for x in range(self.__width):
+                print("#", end="")
+            print()
+
+    def __str__(self):
+        """
+        Return str
+        """
+        string = "[Rectangle] (" + str(self.id) + ") " + str(self.x) + "/"
+        string1 = string + str(self.y) + " - " + str(self.width) + "/"
+        return string1 + str(self.height)
