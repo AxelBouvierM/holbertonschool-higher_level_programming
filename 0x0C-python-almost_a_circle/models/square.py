@@ -27,3 +27,18 @@ class Square(Rectangle):
         string = "[Square] (" + str(self.id) + ") " + str(self.x) + "/"
         string1 = string + str(self.y) + " - " + str(self.width)
         return string1
+
+    @property
+    def size(self):
+        """
+        Gets the width
+        """
+        return self.width
+
+    @size.setter
+    def size(self, value):
+        """
+        Set the size
+        """
+        self.width = value
+        self.height = value
