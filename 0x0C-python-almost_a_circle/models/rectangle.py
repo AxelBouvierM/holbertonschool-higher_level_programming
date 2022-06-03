@@ -126,7 +126,7 @@ class Rectangle(Base):
         """
         assigns an argument to each attribute
         """
-        if args == None or len(args) == 0:
+        if args is None or len(args) == 0:
             for key, value in kwargs.items():
                 if key == "height":
                     self.height = value
