@@ -46,6 +46,7 @@ class Base():
                 f.write("[]")
             f.write(Base.to_json_string(listt))
 
+    @staticmethod
     def from_json_string(json_string):
         """
         returns the list of the JSON string representation json_string
