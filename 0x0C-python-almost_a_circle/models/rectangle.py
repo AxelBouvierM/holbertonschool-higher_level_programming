@@ -2,6 +2,7 @@
 """
 This module define a class Rectangle that inherits from Base
 """
+import json
 from models.base import Base
 
 
@@ -150,3 +151,12 @@ class Rectangle(Base):
                     self.x = args[3]
                 if i == 4:
                     self.y = args[4]
+
+    def to_dictionary(self):
+        """
+        returns the dictionary representation of a Rectangle
+        """
+        dic = {"id": self.id, "width": self.__width, "height": self.__height}
+        dic["x"] = self.__x
+        dic["y"] = self.__y
+        return dic
