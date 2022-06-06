@@ -18,10 +18,7 @@ class Base():
             id: is a identificator
         """
         if id is not None:
-            if id > 0:
-                self.id = id
-            else:
-                raise ValueError("id must be a positive integer greater than 0")
+            self.id = id
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
