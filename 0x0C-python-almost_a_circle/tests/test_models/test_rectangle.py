@@ -7,6 +7,7 @@ import unittest
 from models.base import Base
 from models.rectangle import Rectangle
 
+
 class Testrec_instances(unittest.TestCase):
     """
     Test for Rectangle class
@@ -98,6 +99,7 @@ class Testrec_instances(unittest.TestCase):
     def test_six(self):
         with self.assertRaises(TypeError):
             Rectangle(10, 7, 2, 8, 4, 1)
+
 
 class Testw(unittest.TestCase):
     """Type class unittest instance for rectangle"""

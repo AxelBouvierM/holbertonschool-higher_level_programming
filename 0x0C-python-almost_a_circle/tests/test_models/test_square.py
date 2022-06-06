@@ -7,6 +7,7 @@ import unittest
 from models.base import Base
 from models.square import Square
 
+
 class Testsqr_instances(unittest.TestCase):
     """
     Test for Square class
@@ -21,7 +22,6 @@ class Testsqr_instances(unittest.TestCase):
 
     def test_issqr2(self):
         self.assertIsInstance(Square(10), Square)
-
 
     def test_h_priv(self):
         with self.assertRaises(AttributeError):
@@ -64,6 +64,7 @@ class Testsqr_instances(unittest.TestCase):
     def test_six_arg(self):
         with self.assertRaises(TypeError):
             Square(10, 7, 2, 8, 4, 1)
+
 
 class Testsqr_w(unittest.TestCase):
     """Type class unittest instance for rectangle"""

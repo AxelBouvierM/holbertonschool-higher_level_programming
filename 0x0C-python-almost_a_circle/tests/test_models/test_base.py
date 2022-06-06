@@ -50,8 +50,6 @@ class TestBase(unittest.TestCase):
         json_list_input = Base.to_json_string(list_input)
         list_output = Base.from_json_string(json_list_input)
         self.assertEqual(list_input, list_output)
-
-
         self.assertEqual(Base.from_json_string("[]"), [])
 
     def test_to_json_string(self):
