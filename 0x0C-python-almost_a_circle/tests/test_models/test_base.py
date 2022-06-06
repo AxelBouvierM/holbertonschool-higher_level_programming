@@ -33,8 +33,23 @@ class Testbase_instances(unittest.TestCase):
         with self.assertRaises(AttributeError):
             print(Base(5).__nb_instances)
 
+    def test_str(self):
+        self.assertEqual("tequila", Base("tequila").id)
+
     def test_float(self):
         self.assertEqual(3.1, Base(3.1).id)
+
+    def test_dict(self):
+        self.assertEqual({"val1": 1, "val2": 2}, Base({"val1": 1, "val2": 2}).id)
+
+    def test_list(self):
+        self.assertEqual([1, 2, 3], Base([1, 2, 3]).id)
+
+    def test_tuple(self):
+        self.assertEqual((1, 2, 3), Base((1, 2, 3)).id)
+
+    def test_NaN(self):
+        self.assertNotEqual(float('nan'), Base(float('nan')).id)
 
     def test_inf(self):
         self.assertEqual(float('inf'), Base(float('inf')).id)
@@ -42,6 +57,12 @@ class Testbase_instances(unittest.TestCase):
     def test_twoarg(self):
         with self.assertRaises(TypeError):
             Base(1, 2)
+
+    def test_set(self):
+        self.assertEqual({1, 2, 3}, Base({1, 2, 3}).id)
+
+    def test_frozen(self):
+        self.assertEqual(frozenset({"a", "b", "c"}), Base(frozenset({"a", "b", "c"})).id)
 
 
 class Testbase_to_json(unittest.TestCase):
@@ -92,6 +113,10 @@ class Testbase_to_json(unittest.TestCase):
 
 class Testbase_from_json(unittest.TestCase):
     """Type class unittest from json method"""
+
+
+    def test_from_json_none(self):
+        self.assertEqual([], Base.from_json_string(None))
 
     def test_from_json_empty(self):
         self.assertEqual([], Base.from_json_string("[]"))
@@ -156,6 +181,11 @@ class Testbase_save_file(unittest.TestCase):
             os.remove("Square.json")
         except IOError:
             pass
+
+    def test_save_file_none(self):
+        Rectangle.save_to_file(None)
+        with open("Rectangle.json", "r") as f:
+            self.assertEqual("[]", f.read())
 
     def test_save_file_empty(self):
         Square.save_to_file([])
