@@ -18,7 +18,10 @@ class Base():
             id: is a identificator
         """
         if id is not None:
-            self.id = id
+            if id > 0:
+                self.id = id
+            else:
+                raise ValueError("id must be a positive integer greater than 0")
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
@@ -39,12 +42,11 @@ class Base():
         """
         filename = cls.__name__ + ".json"
         listt = []
-        for i in list_objs:
-            listt.append(i.to_dictionary())
+        if list_objs is not None:
+            for i in list_objs:
+                listt.append(i.to_dictionary())
         with open(filename, "w") as f:
-            if list_objs is None:
-                f.write("[]")
-            f.write(Base.to_json_string(listt))
+            f.write(cls.to_json_string(listt))
 
     @staticmethod
     def from_json_string(json_string):
