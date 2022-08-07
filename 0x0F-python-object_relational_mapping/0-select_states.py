@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Task 0"""
 if __name__ == '__main__':
     import MySQLdb
     import sys
