@@ -3,7 +3,7 @@
 
 if __name__ == "__main__":
     import sys
-    mport urllib.request
+    import urllib.request
     import urllib.error
 
     request = urllib.request.Request(sys.argv[1])
