@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """ Task 5 """
 
-if __name__ == "__main__":
-    import sys
-    import requests
+import requests
+from sys import argv
 
-    url = sys.argv[1]
-    r = requests.get(url)
-    print(r.headers['X-Request-Id'])
+if __name__ == "__main__":
+    url = argv[1]
+    response = requests.get(url)
+    print(response.headers.get("X-Request-Id"))
